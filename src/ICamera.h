@@ -3,7 +3,7 @@
 #pragma once
 
 #include "ray.h"
-
+//lucia fuentes
 /**
  * @brief Basic camera abstract interface class
  */
