@@ -1,4 +1,4 @@
-//  Lucia Fuentes//Fall 2019 
+//  Lucia Fuentes//Fall 2019 //changes occured
 // Perspective Camera class
 // Written by Sergey Kosov in 2005 for Rendering Competition
 #pragma once

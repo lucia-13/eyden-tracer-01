@@ -1,3 +1,4 @@
+//lucia fuentes //fall 2019 //changed
 // Sphere Geaometrical Primitive class
 // Written by Sergey Kosov in 2005 for Rendering Competition
 #pragma once
@@ -16,7 +17,7 @@ public:
 	 * @param radius Radius of the sphere
 	 */
 	CPrimSphere(Vec3f center, float radius)
-		: CPrim()
+		: CPrim(color)
 		, m_center(center)
 		, m_radius(radius)
 	{}
@@ -24,7 +25,23 @@ public:
 
 	virtual bool Intersect(Ray &ray) override
 	{
-		// --- PUT YOUR CODE HERE ---
+        float one = ray.dir.dot(ray.dir);
+        float two = 2 * ray.dir.dot(ray.org - m_center);
+        float three = (ray.org - m_center).dot(ray.org - m_center) - m_radius * m_radius;
+        
+        float exam = two * two - (4 * one * three);
+        if (exam < 0){
+            return false;
+        }
+        
+        float tot = ((-two) + sqrt(exam)) / one;
+        
+        if (tot < Epsilon || tot > ray.t){
+            return false;
+        }
+        
+        ray.t = tot;
+		
 		return true;
 	}
 	

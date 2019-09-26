@@ -1,3 +1,5 @@
+//Lucia Fuentes//fall 2019// changed
+
 // Geaometrical Primitives base abstract class
 // Written by Sergey Kosov in 2005 for Rendering Competition
 #pragma once
@@ -13,6 +15,7 @@ public:
 	/**
 	* @brief Constructor
 	*/
+        CPrim(Vec3f colorx) : color(colorx){};
 	CPrim(void) = default;
 	CPrim(const CPrim&) = delete;
 	virtual ~CPrim(void) = default;
@@ -26,4 +29,10 @@ public:
 	 * @retval false Otherwise
 	 */
 	virtual bool	Intersect(Ray& ray) = 0;
+    Vec3f getcolor(){
+        return  color;
+    }
+    
+private:
+    Vec3f color;
 };
