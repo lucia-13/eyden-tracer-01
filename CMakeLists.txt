@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 3.1)
 
-project (eyden-tracer)
+project (eyden-tracer-01)
 
 configure_file(${PROJECT_SOURCE_DIR}/cmake/types.h.in ${PROJECT_SOURCE_DIR}/include/types.h)
 
