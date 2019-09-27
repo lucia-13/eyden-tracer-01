@@ -42,3 +42,5 @@ add_executable(eyden-tracer ${INCLUDE} ${SOURCES} ${HEADERS})
 
 # Properties -> Linker -> Input -> Additional Dependencies
 target_link_libraries(eyden-tracer ${OpenCV_LIBS})
+
+
